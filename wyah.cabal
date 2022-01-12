@@ -12,9 +12,9 @@ build-type:     Simple
 
 library
   exposed-modules:
-      Language.Eval
-      Language.Lexer
-      Language.Repl
+      Calculator.Eval
+      Calculator.Lexer
+      Calculator.Repl
   other-modules:
       Paths_wyah
   hs-source-dirs:

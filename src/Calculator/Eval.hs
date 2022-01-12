@@ -1,6 +1,6 @@
-module Language.Eval where
+module Calculator.Eval where
 
-import Language.Lexer (Expr (..))
+import Calculator.Lexer (Expr (..))
 
 isNum :: Expr -> Bool
 isNum Zero = True

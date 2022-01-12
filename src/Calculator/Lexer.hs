@@ -1,4 +1,4 @@
-module Language.Lexer where
+module Calculator.Lexer where
 
 import Data.Text (Text, pack)
 import Data.Void (Void)

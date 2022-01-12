@@ -1,9 +1,9 @@
-module Language.Repl where
+module Calculator.Repl where
 
+import Calculator.Eval (eval)
+import Calculator.Lexer (parseExpr)
 import Control.Monad.IO.Class (MonadIO (liftIO))
 import Data.Text (pack)
-import Language.Eval (eval)
-import Language.Lexer (parseExpr)
 import System.Console.Haskeline (defaultSettings, getInputLine, outputStrLn, runInputT)
 
 process :: String -> IO ()
