@@ -11,6 +11,10 @@ license-file:   LICENSE
 build-type:     Simple
 
 library
+  exposed-modules:
+      Language.Eval
+      Language.Lexer
+      Language.Repl
   other-modules:
       Paths_wyah
   hs-source-dirs:
@@ -49,17 +53,9 @@ library
   ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-missing-home-modules -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module -Wno-unused-packages -Wno-implicit-prelude
   build-depends:
       base >=4.7 && <5
-    , bytestring
-    , containers
-    , directory
-    , filepath
-    , mtl
-    , random
+    , haskeline
+    , megaparsec
     , text
-    , time
-    , transformers
-    , unordered-containers
-    , vector
   default-language: Haskell2010
 
 executable wyah
@@ -102,17 +98,9 @@ executable wyah
   ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-missing-home-modules -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module -Wno-unused-packages -Wno-implicit-prelude -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , bytestring
-    , containers
-    , directory
-    , filepath
-    , mtl
-    , random
+    , haskeline
+    , megaparsec
     , text
-    , time
-    , transformers
-    , unordered-containers
-    , vector
     , wyah
   default-language: Haskell2010
 
@@ -157,18 +145,10 @@ test-suite spec
   ghc-options: -Weverything -Wno-missing-exported-signatures -Wno-missing-import-lists -Wno-missed-specialisations -Wno-all-missed-specialisations -Wno-unsafe -Wno-safe -Wno-missing-local-signatures -Wno-monomorphism-restriction -Wno-missing-export-lists -Wno-missing-home-modules -Wno-missing-safe-haskell-mode -Wno-prepositive-qualified-module -Wno-unused-packages -Wno-implicit-prelude -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
-    , bytestring
-    , containers
-    , directory
-    , filepath
+    , haskeline
     , hspec
-    , mtl
-    , random
+    , megaparsec
     , text
-    , time
-    , transformers
-    , unordered-containers
-    , vector
     , wyah
   default-language: Haskell2010
   build-tool-depends: hspec-discover:hspec-discover == 2.*
