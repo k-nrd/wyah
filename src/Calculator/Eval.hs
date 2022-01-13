@@ -1,6 +1,6 @@
 module Calculator.Eval where
 
-import Calculator.Lexer (Expr (..))
+import Calculator.Expr (Expr (..))
 
 isNum :: Expr -> Bool
 isNum Zero = True

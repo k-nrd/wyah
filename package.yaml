@@ -7,6 +7,8 @@ dependencies:
   - megaparsec
   - text
   - haskeline 
+  - pretty
+  - mtl
 
 library:
   source-dirs: src
